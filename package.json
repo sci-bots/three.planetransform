@@ -2,14 +2,14 @@
   "name": "three.planetransform",
   "version": "1.0.0",
   "description": "",
-  "main": "three.planetransform.js",
+  "main": "build/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "dependencies": {
-    "numeric": "^1.2.6",
-    "threex.videotexture": "^1.0.0"
+    "lodash": "^4.17.4",
+    "numeric": "^1.2.6"
   }
 }
