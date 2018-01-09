@@ -152,6 +152,16 @@ module.exports = (THREE) => {
                 _.forEach(diagonalRatios, (value, i) => { array[i] = value });
             }
             this.updateCorners();
+            var {diagonalRatio, position} = this.geometry.attributes;
+            var diagonalRatioArray = [...diagonalRatio.array];
+            var positionArray = [...position.array];
+            return {diagonalRatioArray, positionArray};
+        }
+
+        applyPrevGeometry(diagonalRatioArray, positionArray) {
+          this.geometry.attributes.diagonalRatio.array = new Float32Array(diagonalRatioArray);
+          this.geometry.attributes.position.array = new Float32Array(positionArray);
+          this.updateCorners();
         }
 
         updateCorners() {
