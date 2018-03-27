@@ -39,6 +39,7 @@ module.exports = (THREE) => {
                                     {minWidth: 1920},
                                     {minWidth: 2560}]}},
                 (stream) => {
+                    this.stream = stream;
                     this.video.src = URL.createObjectURL(stream);
                     this.initVideo();
                 },
